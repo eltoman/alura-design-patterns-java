@@ -1,3 +1,5 @@
+package org.com.studies.patterns.chainOfResponsibility;
+
 public class CalculadorDeDescontos {
 	public double calcula(Orcamento orcamento) {
 		Desconto d1 = new DescontoPorMaisDeCincoItens();

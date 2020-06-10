@@ -1,3 +1,5 @@
+package org.com.studies.patterns.strategy;
+
 import java.util.Random;
 
 class Moderado implements Investimento {

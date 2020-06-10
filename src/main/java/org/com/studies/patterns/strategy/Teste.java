@@ -1,3 +1,7 @@
+package org.com.studies.patterns.strategy;
+
+import org.com.studies.patterns.chainOfResponsibility.Orcamento;
+
 public class Teste {
 	public static void main(String[] args) {
 		testeOrcamento();

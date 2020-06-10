@@ -1,3 +1,5 @@
+package org.com.studies.patterns.strategy;
+
 class Conta {
 	private double saldo;
 

@@ -1,3 +1,5 @@
+package org.com.studies.patterns.chainOfResponsibility;
+
 public class DescontoPorMaisDeCincoItens implements Desconto {
         private Desconto proximo;
 

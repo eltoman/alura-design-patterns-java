@@ -1,3 +1,5 @@
+package org.com.studies.patterns.chainOfResponsibility;
+
 public class SemDesconto implements Desconto {
 
 	public double desconta(Orcamento orcamento) {

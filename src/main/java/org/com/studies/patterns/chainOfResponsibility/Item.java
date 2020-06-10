@@ -1,3 +1,5 @@
+package org.com.studies.patterns.chainOfResponsibility;
+
 public class Item {
 
 	private String nome;

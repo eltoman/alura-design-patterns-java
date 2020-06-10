@@ -1,3 +1,5 @@
+package org.com.studies.patterns.chainOfResponsibility;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

@@ -1,3 +1,5 @@
+package org.com.studies.patterns.strategy;
+
 import java.util.Random;
 
 class Arrojado implements Investimento {

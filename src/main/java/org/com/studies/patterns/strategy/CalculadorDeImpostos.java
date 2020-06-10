@@ -1,3 +1,7 @@
+package org.com.studies.patterns.strategy;
+
+import org.com.studies.patterns.chainOfResponsibility.Orcamento;
+
 public class CalculadorDeImpostos {
 
 	public void realizaCalculo(Orcamento orcamento, Imposto imposto) {
