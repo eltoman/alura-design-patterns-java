@@ -2,13 +2,11 @@ package org.com.studies.patterns.chainOfResponsibility;
 
 public class CalculadorDeDescontos {
 	public double calcula(Orcamento orcamento) {
-		Desconto d1 = new DescontoPorMaisDeCincoItens();
-		Desconto d2 = new DescontoPorMaisDeQuinhentosReais();
-		Desconto d3 = new SemDesconto();
+		Desconto semDesconto = new SemDesconto();
+		Desconto descontoPorVendaCasada = new DescontoPorVendaCasada(semDesconto);
+		Desconto descontoPorMaisDeQuinhentosReais = new DescontoPorMaisDeQuinhentosReais(descontoPorVendaCasada);
+		Desconto cadeiaDeDesconto = new DescontoPorMaisDeCincoItens(descontoPorMaisDeQuinhentosReais);
 
-		d1.setProximo(d2);
-		d2.setProximo(d3);
-
-		return d1.desconta(orcamento);
+		return cadeiaDeDesconto.desconta(orcamento);
 	}
 }
