@@ -13,9 +13,11 @@ public class TesteDeImpostos {
 		CalculadorDeImpostos calculador = new CalculadorDeImpostos();
 
 		// Calculando o ISS
+		System.out.println("-- Calculando o ISS --");
 		calculador.realizaCalculo(orcamento, iss);
 
 		// Calculando o ICMS
+		System.out.println("-- Calculando o ICMS --");
 		calculador.realizaCalculo(orcamento, icms);
 	}
 }

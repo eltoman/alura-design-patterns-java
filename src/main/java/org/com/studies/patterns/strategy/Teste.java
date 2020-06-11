@@ -13,6 +13,7 @@ public class Teste {
 		Orcamento reforma = new Orcamento(500.0);
 
 		Imposto novoImposto = new ICCC();
+		System.out.println("Novo imposto: ");
 		System.out.println(novoImposto.calcula(reforma));
 
 	}
