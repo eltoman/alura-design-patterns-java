@@ -6,6 +6,15 @@ public class Conta {
 	private String numero;
 	private String agencia;
 
+	public Conta(){
+	}
+
+	public Conta(String nome, String numero, String agencia){
+		this.nome = nome;
+		this.numero = numero;
+		this.agencia = agencia;
+	}
+
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
