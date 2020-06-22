@@ -15,5 +15,9 @@ public class TesteContas {
         Numero numero = new Numero(100);
         Expressao divisao = new Divisao(numero, direita);
         System.out.println("divisao de 100: " + divisao.avalia());
+
+        Numero numeroRaiz = new Numero(64);
+        Expressao raiz = new RaizQuadrada(numeroRaiz);
+        System.out.println("raiz de " + numeroRaiz.getNumero() + ": " + raiz.avalia());
     }
 }
