@@ -1,4 +1,7 @@
-package org.com.studies.patternsII.visitor;
+package org.com.studies.patternsII.visitor.operacoes;
+
+import org.com.studies.patternsII.visitor.Expressao;
+import org.com.studies.patternsII.visitor.ImpressoraVisitor;
 
 public class Subtracao implements Expressao {
     Expressao esquerda;
@@ -17,8 +20,8 @@ public class Subtracao implements Expressao {
     }
 
     @Override
-    public void aceita(Visitor visitor) {
-        visitor.visitaSubtracao(this);
+    public void aceita(ImpressoraVisitor impressoraVisitor) {
+        impressoraVisitor.visitaSubtracao(this);
     }
 
     public Expressao getEsquerda() {

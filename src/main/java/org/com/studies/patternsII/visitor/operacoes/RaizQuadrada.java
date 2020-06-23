@@ -1,7 +1,10 @@
-package org.com.studies.patternsII.visitor;
+package org.com.studies.patternsII.visitor.operacoes;
+
+import org.com.studies.patternsII.visitor.Expressao;
+import org.com.studies.patternsII.visitor.ImpressoraVisitor;
 
 public class RaizQuadrada implements Expressao {
-    Expressao expressao;
+    public Expressao expressao;
 
     public RaizQuadrada(Expressao expressao) {
         this.expressao = expressao;
@@ -14,8 +17,8 @@ public class RaizQuadrada implements Expressao {
     }
 
     @Override
-    public void aceita(Visitor visitor) {
-        visitor.visitaRaizQuadrada(this);
+    public void aceita(ImpressoraVisitor impressoraVisitor) {
+        impressoraVisitor.visitaRaizQuadrada(this);
     }
 
     public Expressao getExpressao() {

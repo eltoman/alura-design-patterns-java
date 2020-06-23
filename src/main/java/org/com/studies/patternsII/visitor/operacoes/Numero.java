@@ -1,4 +1,7 @@
-package org.com.studies.patternsII.visitor;
+package org.com.studies.patternsII.visitor.operacoes;
+
+import org.com.studies.patternsII.visitor.Expressao;
+import org.com.studies.patternsII.visitor.ImpressoraVisitor;
 
 public class Numero implements Expressao {
     private int numero;
@@ -17,7 +20,7 @@ public class Numero implements Expressao {
     }
 
     @Override
-    public void aceita(Visitor visitor) {
-        visitor.visitaNumero(this);
+    public void aceita(ImpressoraVisitor impressoraVisitor) {
+        impressoraVisitor.visitaNumero(this);
     }
 }

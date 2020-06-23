@@ -1,55 +1,17 @@
 package org.com.studies.patternsII.visitor;
 
-public class ImpressoraVisitor implements Visitor {
+import org.com.studies.patternsII.visitor.operacoes.*;
 
-    @Override
-    public void visitaSoma(Soma soma) {
-        System.out.print("(");
-        soma.getEsquerda().aceita(this);
-        System.out.print(" + ");
-        soma.getDireita().aceita(this);
-        System.out.print(")");
+public interface ImpressoraVisitor {
+    void visitaSoma(Soma soma);
 
-    }
+    void visitaSubtracao(Subtracao subtracao);
 
-    @Override
-    public void visitaSubtracao(Subtracao subtracao) {
-        System.out.print("(");
-        subtracao.getEsquerda().aceita(this);
-        System.out.print(" - ");
-        subtracao.getDireita().aceita(this);
-        System.out.print(")");
-    }
+    void visitaNumero(Numero numero);
 
-    @Override
-    public void visitaNumero(Numero numero) {
-        System.out.print(numero.getNumero());
+    void visitaMultiplicao(Multiplicacao multiplicacao);
 
-    }
+    void visitaDivisao(Divisao divisao);
 
-    @Override
-    public void visitaMultiplicao(Multiplicacao multiplicacao) {
-        System.out.print("(");
-        multiplicacao.getEsquerda().aceita(this);
-        System.out.print(" X ");
-        multiplicacao.getDireita().aceita(this);
-        System.out.print(")");
-    }
-
-    @Override
-    public void visitaDivisao(Divisao divisao) {
-        System.out.print("(");
-        divisao.getEsquerda().aceita(this);
-        System.out.print(" / ");
-        divisao.getDireita().aceita(this);
-        System.out.print(")");
-    }
-
-    @Override
-    public void visitaRaizQuadrada(RaizQuadrada raizQuadrada) {
-        System.out.print(" sqrt ");
-        System.out.print("(");
-        raizQuadrada.expressao.aceita(this);
-        System.out.print(")");
-    }
+    void visitaRaizQuadrada(RaizQuadrada raizQuadrada);
 }
