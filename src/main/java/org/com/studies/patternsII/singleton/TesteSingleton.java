@@ -6,6 +6,8 @@ import org.com.studies.patternsII.singleton.legacy.Cliente;
 import org.com.studies.patternsII.singleton.legacy.Cobranca;
 import org.com.studies.patternsII.singleton.legacy.ContatoCliente;
 import org.com.studies.patternsII.singleton.legacy.Fatura;
+import org.com.studies.patternsII.singleton.servicos.Servico;
+import org.com.studies.patternsII.singleton.servicos.ServicoSingleton;
 
 public class TesteSingleton {
 
@@ -24,5 +26,11 @@ public class TesteSingleton {
         Cobranca cobranca = empresa.geraCobranca(fatura);
         ContatoCliente contatoCliente = empresa.fazContato(cliente, cobranca);
 
+
+        Servico servico = new ServicoSingleton().getInstancia();
+        Servico servico1 = new ServicoSingleton().getInstancia();
+
+        System.out.println(servico.toString());
+        System.out.println(servico1.toString());
     }
 }
